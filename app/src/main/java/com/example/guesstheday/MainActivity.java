@@ -45,5 +45,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         }));
+
+        Hkr2btn.setOnClickListener((new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Hacker2Mode.class);
+                overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
+                startActivity(intent);
+            }
+        }));
     }
 }
