@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, NormalMode.class);
+                overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
                 startActivity(intent);
             }
         });
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, Hacker1Mode.class);
+                overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
                 startActivity(intent);
             }
         }));
