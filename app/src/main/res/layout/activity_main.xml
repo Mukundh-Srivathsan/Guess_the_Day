@@ -57,7 +57,7 @@
         android:layout_marginTop="70dp"
         android:layout_marginEnd="71dp"
         android:background="#040404"
-        android:text="Hacker+"
+        android:text="Hacker"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
