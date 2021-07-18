@@ -9,7 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GuessTheDay">
-        <activity android:name=".MainActivity">
+        <activity android:name=".Hacker2Mode"></activity>
+        <activity android:name=".Hacker1Mode" />
+        <activity android:name=".NormalMode"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Second_Screen" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,7 +24,6 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Second_Screen"></activity>
 
         <meta-data
             android:name="preloaded_fonts"

@@ -4,67 +4,62 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/teal_200"
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/Question"
-        android:layout_width="412dp"
-        android:layout_height="103dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="92dp"
+        android:id="@+id/Ttile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
         android:fontFamily="@font/amaranth"
-        android:gravity="center_vertical|center"
-        android:textSize="40sp"
+        android:text="Guess The Day"
+        android:textAllCaps="true"
+        android:textColor="#FF80AB"
+        android:textSize="48sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="300dp"
-        android:text="Button"
-        android:onClick="button1"
+        android:id="@+id/Normal"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="71dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="71dp"
+        android:background="#070707"
+        android:fontFamily="sans-serif-medium"
+        android:text="Normal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/Ttile" />
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="Button"
+        android:id="@+id/Hacker2"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="71dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="71dp"
+        android:background="#050505"
+        android:text="Hacker++"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button1" />
+        app:layout_constraintTop_toBottomOf="@+id/Hacker1" />
 
     <Button
-        android:id="@+id/button3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="Button"
+        android:id="@+id/Hacker1"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="71dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="71dp"
+        android:background="#040404"
+        android:text="Hacker+"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="Button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
-
-
-
+        app:layout_constraintTop_toBottomOf="@+id/Normal" />
 </androidx.constraintlayout.widget.ConstraintLayout>
