@@ -26,9 +26,8 @@ public class HackerScore extends AppCompatActivity {
     TextView nameTitle;
     EditText enterName;
     Button done;
+    String score;
 
-    Intent intent = getIntent();
-    final String score = intent.getStringExtra("Score");
 
     String name;
     String shareScore;
@@ -46,6 +45,9 @@ public class HackerScore extends AppCompatActivity {
         enterName = (EditText) findViewById(R.id.enterName);
         done = (Button) findViewById(R.id.doneBtn);
 
+        Intent intent = getIntent();
+        score = intent.getStringExtra("Score");
+
         sc_no.setText(score);
 
         done.setOnClickListener(new View.OnClickListener() {
@@ -54,31 +56,37 @@ public class HackerScore extends AppCompatActivity {
                 if (enterName.getText().toString().equals("")) {
                     Toast.makeText(HackerScore.this, "Enter valid name", Toast.LENGTH_SHORT).show();
                 } else {
-                    //saveData();
-                    System.exit(0);
+                    saveData();
+                    loadData();
                 }
             }
         });
     }
 
-   /* public void saveData()
-    {
+    public void saveData() {
         SharedPreferences sharedPreferences = getSharedPreferences("highscore", MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
 
-        editor.putString("name", enterName.getText().toString());
-        editor.putString("score", score);
-
+        if (score.compareTo(sharedPreferences.getString("score", "")) > 0) {
+            editor.putString("name", enterName.getText().toString());
+            editor.putString("score", score);
+        }
         editor.apply();
-    }*/
+    }
 
-   /* public void loadData()
-    {
+    public void loadData() {
         SharedPreferences sharedPreferences = getSharedPreferences("highscore", MODE_PRIVATE);
 
         name = sharedPreferences.getString("name", "");
         shareScore = sharedPreferences.getString("score", "");
 
+        Intent intent = new Intent(HackerScore.this, MainActivity.class);
+        intent.putExtra("Score", shareScore);
+        intent.putExtra("Name", name);
+        overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
+        startActivity(intent);
 
-    }*/
+        System.exit(0);
+
+    }
 }

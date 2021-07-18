@@ -27,18 +27,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Log.d(TAG, "OnCreate: Started");
 
-        SharedPreferences mPreferences = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
-        SharedPreferences.Editor editor = mPreferences.edit();
+        Intent intent = getIntent();
+        String score = intent.getStringExtra("Score");
+        String name = intent.getStringExtra("Name");
 
-        String name = mPreferences.getString("name", "");
-        String score = mPreferences.getString("score", "");
 
         Button Nrbtn = (Button) findViewById(R.id.Normal);
         Button Hkr1btn = (Button) findViewById(R.id.Hacker1);
         Button Hkr2btn = (Button) findViewById(R.id.Hacker2);
         TextView hscore = (TextView) findViewById(R.id.highscore);
 
-        hscore.setText("Highscore : " + name + " - " + score);
+        hscore.setText("Name: " + name + "\nHighScore: " + score);
 
         Nrbtn.setOnClickListener(new View.OnClickListener() {
             @Override
