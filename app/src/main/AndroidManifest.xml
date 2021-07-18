@@ -3,6 +3,7 @@
     package="com.example.guesstheday">
 
     <uses-permission android:name="android.permission.VIBRATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,21 +11,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GuessTheDay">
-        <activity android:name=".Hacker2Mode"></activity>
+        <activity android:name=".HackerScore"></activity>
+        <activity android:name=".Hacker2Mode" />
         <activity android:name=".Hacker1Mode" />
-        <activity android:name=".NormalMode"
+        <activity
+            android:name=".NormalMode"
             android:screenOrientation="portrait" />
-        <activity android:name=".Second_Screen" />
+        <activity android:name=".Score" />
         <activity
             android:name=".MainActivity"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
 
         <meta-data
             android:name="preloaded_fonts"
